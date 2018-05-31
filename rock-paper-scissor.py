@@ -1,31 +1,40 @@
+import random
+
 print("Rock...")
 print("Paper...")
 print("Scissors...")
 
-player1 = input("(Player 1, enter your choice.) ")
-player2 = input("(Player 2, enter your choice.) ")
+player1 = input("(enter Player 1's choice): ")
 
 print("Shoot!")
 
+computer = random.randint(0, 2)
+
+# 0 = "Rock"
+# 1 = "Paper"
+# 2 = "Scissors"
+
 if player1 == "Rock":
-	if player2 == "Paper":
-		print("Player 2 wins!")
-	elif player2 == "Scissors":
+	if computer == 1:
+		print("Computer wins!")
+	elif computer == 2:
 		print("Player 1 wins!")
 
 elif player1 == "Paper":
-	if player2 == "Rock":
+	if computer == 0:
 		print("Player 1 wins!")
-	elif player2 == "Scissors":
-		print("Player 2 wins!")
+	elif computer == 2:
+		print("Computer wins!")
+
 
 elif player1 == "Scissors":
-	if  player2 == "Rock":
-		print("Player 2 wins!")
-	elif player2 == "Paper":
+	if  computer == 0:
+		print("Computer wins!")
+	elif computer == 1:
 		print("Player 1 wins!")
 
-elif player1 == player2:
+
+elif player1 == computer:
 	print("Tie!")
 
 else:
